@@ -60,13 +60,12 @@ function createPhotoFigure(key, compact = false) {
   const title = document.createElement('span');
   title.textContent = photo.title;
   const source = document.createElement('a');
-  source.href = `#credit-${key}`;
+  source.href = photo.sourceUrl;
+  source.target = '_blank';
+  source.rel = 'noopener';
   source.className = 'photo-source';
   source.textContent = '照片來源';
   source.setAttribute('aria-label', `${photo.title}的照片來源與授權`);
-  source.addEventListener('click', () => {
-    document.getElementById('photo-credits').open = true;
-  });
   caption.append(title, source);
   figure.append(button, caption);
   return figure;
@@ -75,19 +74,6 @@ function createPhotoFigure(key, compact = false) {
 const routePhotoKeys = ['acropolis', 'delphi', 'meteora', 'parikia', 'portara', 'oia'];
 document.querySelectorAll('.route-symbol').forEach((symbol, index) => {
   symbol.replaceWith(createPhotoFigure(routePhotoKeys[index], true));
-});
-
-const creditList = document.getElementById('photo-credit-list');
-Object.entries(tripPhotos).forEach(([key, photo]) => {
-  const item = document.createElement('li');
-  item.id = `credit-${key}`;
-  item.tabIndex = -1;
-  const title = document.createElement('strong');
-  title.textContent = photo.title;
-  const credit = document.createElement('span');
-  credit.append(photoAttribution(photo));
-  item.append(title, credit);
-  creditList.append(item);
 });
 
 document.getElementById('close-photo').addEventListener('click', () => photoDialog.close());
