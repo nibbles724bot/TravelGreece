@@ -110,5 +110,47 @@
     "width": 1100,
     "height": 620,
     "modifications": "縮小尺寸並轉為 WebP；網頁版面可能裁切顯示。"
+  },
+  "parikia": {
+    "src": "assets/photos/islands/parikia.webp",
+    "title": "Parikia 港灣",
+    "alt": "帕羅斯 Parikia 的小港灣停著漁船，海灣對岸是白色城鎮與山坡。",
+    "description": "下船後沿著海岸慢走，讓帕羅斯的藍色港灣迎接假期。",
+    "author": "Jean Housen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:20221101_435_Paros.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/81/20221101_435_Paros.jpg",
+    "width": 1000,
+    "height": 666,
+    "modifications": "縮小尺寸並轉為 WebP；網頁版面可能裁切顯示。"
+  },
+  "naoussa": {
+    "src": "assets/photos/islands/naoussa.webp",
+    "title": "Naoussa 漁港",
+    "alt": "帕羅斯 Naoussa 漁港的彩色漁船停靠碼頭，白色房屋沿著港邊延伸。",
+    "description": "在漁船與白色小屋之間，找一張適合午餐的桌子。",
+    "author": "ian freeman",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Naoussa_Harbour_-_panoramio.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Naoussa_Harbour_-_panoramio.jpg",
+    "width": 1000,
+    "height": 750,
+    "modifications": "縮小尺寸並轉為 WebP；網頁版面可能裁切顯示。"
+  },
+  "lefkes": {
+    "src": "assets/photos/islands/lefkes.webp",
+    "title": "Lefkes 山村",
+    "alt": "帕羅斯內陸 Lefkes 村的白色屋舍沿丘陵層疊，村邊有綠樹和教堂鐘塔。",
+    "description": "走進島中央的山村，把午後留給白色巷子與咖啡香。",
+    "author": "Kondephy",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lefkes_(Paros)_Village_View.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Lefkes_%28Paros%29_Village_View.jpg",
+    "width": 1000,
+    "height": 666,
+    "modifications": "縮小尺寸並轉為 WebP；網頁版面可能裁切顯示。"
   }
 }

@@ -1,11 +1,6 @@
 'use strict';
 
 // Photographs are stored locally; the catalog retains each original source and license.
-const dayPhotoKeys = [
-  'plaka', 'acropolis', 'agora', 'delphi', 'meteora', 'meteora', 'piraeus',
-  'portara', 'naxos-town', 'halki', 'agios-prokopios', 'fira', 'oia',
-  'imerovigli', 'pyrgos', 'plaka', 'museum', 'garden', 'acropolis'
-];
 const photoDialog = document.getElementById('photo-dialog');
 let photoOpener;
 let savedPageOverflow = '';
@@ -77,7 +72,7 @@ function createPhotoFigure(key, compact = false) {
   return figure;
 }
 
-const routePhotoKeys = ['acropolis', 'delphi', 'meteora', 'portara', 'oia'];
+const routePhotoKeys = ['acropolis', 'delphi', 'meteora', 'parikia', 'portara', 'oia'];
 document.querySelectorAll('.route-symbol').forEach((symbol, index) => {
   symbol.replaceWith(createPhotoFigure(routePhotoKeys[index], true));
 });

@@ -12,7 +12,7 @@
 .destination-photo figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:9px 16px;font-size:13px;line-height:1.7;color:var(--blue)}
 .photo-source{font-size:12px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;flex-shrink:0}
 .day-photo{border-bottom:1px solid var(--line)}
-.route-strip{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;padding:12px 0 28px;align-items:start}
+.route-strip{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;padding:12px 0 28px;align-items:start}
 .route-strip>div{min-width:0}
 .route-strip .connector{display:none}
 .route-photo{background:transparent;margin-bottom:14px}
@@ -39,6 +39,23 @@
 .photo-credits strong{display:block;font-size:14px;font-weight:500;margin-bottom:4px}
 .photo-credits li>span{display:block;font-size:12px;color:var(--muted)}
 @media(max-width:1000px){.route-strip{gap:12px}.route-photo figcaption{font-size:12px}.route-photo .photo-trigger img{aspect-ratio:1/1}}
-@media(max-width:640px){.route-strip{grid-template-columns:1fr 1fr;gap:24px 18px}.route-strip>div:last-child{grid-column:1/-1;max-width:calc(50% - 9px);width:100%;justify-self:center}.route-photo .photo-trigger img{aspect-ratio:4/3}.photo-hint{font-size:13px;margin-top:0}.destination-photo figcaption{padding:9px 16px}.route-photo figcaption{padding:8px 0 0}.photo-dialog{width:calc(100% - 24px);max-height:calc(100dvh - 24px)}.photo-dialog-toolbar{padding:10px 14px;font-size:13px}.photo-dialog-caption{padding:20px}.photo-dialog-caption h2{font-size:23px}.photo-dialog-caption .eyebrow{font-size:10px;letter-spacing:1px}.photo-credits ul{grid-template-columns:1fr}}
+@media(max-width:640px){.route-strip{grid-template-columns:1fr 1fr;gap:24px 18px}.route-strip>div:last-child{grid-column:auto;max-width:none;width:auto;justify-self:stretch}.route-photo .photo-trigger img{aspect-ratio:4/3}.photo-hint{font-size:13px;margin-top:0}.destination-photo figcaption{padding:9px 16px}.route-photo figcaption{padding:8px 0 0}.photo-dialog{width:calc(100% - 24px);max-height:calc(100dvh - 24px)}.photo-dialog-toolbar{padding:10px 14px;font-size:13px}.photo-dialog-caption{padding:20px}.photo-dialog-caption h2{font-size:23px}.photo-dialog-caption .eyebrow{font-size:10px;letter-spacing:1px}.photo-credits ul{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.photo-trigger img{transition:none}.photo-trigger:hover img{transform:none}}
 @media print{.photo-dialog{display:none!important}.photo-trigger img{max-height:160px;object-fit:cover}.route-strip{gap:12px}.route-photo .photo-trigger img{max-height:90px}.photo-trigger{cursor:default}.photo-credits ul{display:block}.photo-credits li{break-inside:avoid}.photo-credits{font-size:10pt}}
+
+/* A readable daily rhythm alongside the date. */
+.day-top{gap:12px;align-items:center}
+.day-meta{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:7px 12px}
+.rhythm-badge{display:inline-block;border-radius:5px;padding:2px 9px;font-size:12px;font-weight:500;line-height:1.8;white-space:nowrap}
+.rhythm-move{background:#eee0cf;color:#78512e}
+.rhythm-relaxed{background:#e3eddf;color:#3e6047}
+.rhythm-explore{background:#e0eaee;color:#315c72}
+.rhythm-guide{display:flex;flex-wrap:wrap;gap:10px 22px;margin:0 0 24px;font-size:13px;color:var(--muted)}
+.rhythm-guide>span{display:flex;gap:7px;align-items:center}
+.rental-note{margin-top:28px;border-top:1px solid #cad8cc;padding-top:20px}
+.rental-note h3{font-size:17px}
+.rental-note p{font-size:14px;color:var(--muted);margin:10px 0 0}
+.route-photo figcaption>span{display:block;min-height:3.4em}
+@media(max-width:1000px){.route-strip{grid-template-columns:repeat(3,minmax(0,1fr));gap:25px 20px}.route-photo .photo-trigger img{aspect-ratio:4/3}.route-photo figcaption>span{min-height:0}.day-meta{gap:4px 10px}}
+@media(max-width:640px){.route-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.route-strip>div:last-child{grid-column:auto}.day-meta{flex-wrap:nowrap}.rhythm-guide{gap:10px 16px;font-size:12px}.rental-note{margin-bottom:30px}}
+@media print{.rhythm-guide{font-size:10pt}.rhythm-badge{border:1px solid currentColor}.route-strip{grid-template-columns:repeat(3,minmax(0,1fr))}.route-photo figcaption>span{min-height:0}}
