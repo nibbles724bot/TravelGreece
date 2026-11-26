@@ -15,11 +15,13 @@
 ## 功能
 
 - 19 天每日行程與交通筆記，可按目的地篩選
-- 每日 Google Maps 搜尋連結
+- 每日景點實景照片與 Google Maps 搜尋連結
+- 點照片放大，支援 Escape 關閉與鍵盤操作
+- 照片作者、來源與授權可從每張縮圖或頁尾查閱
 - 可調人數、國際機票及歐元換算的即時預算
 - 本機儲存行前清單與列印版
 - 手機版、鍵盤操作與降低動畫偏好支援
-- 全部插畫隨專案提供，不需外部圖片或套件
+- 插畫與照片均隨專案提供，不依賴外部圖片熱連或套件
 
 ## 預覽與檢查
 
@@ -29,7 +31,7 @@
 python3 -m http.server 8000
 ```
 
-開啟 http://localhost:8000 。語法檢查：`node --check app.js`。
+開啟 http://localhost:8000 。語法檢查：`node --check app.js && node --check gallery.js && node --check assets/photos/catalog.js`。
 
 ## GitHub Pages
 
@@ -43,3 +45,9 @@ python3 -m http.server 8000
 - https://www.bluestarferries.com/en-gb
 
 景點描述參考官方旅遊資訊；行程和預算是本專案建議。網站另提供航空公司與古蹟售票官方入口，出發前需重新核對。
+
+## 照片與授權
+
+實景照片存於 `assets/photos/`，來源及各自授權完整記錄於 `mainland.json`、`islands.json` 及網站使用的 `catalog.js`。照片依原作者授權使用，已縮小尺寸與壓縮；網頁縮圖用 CSS 裁切顯示，放大檢視保留完整畫面。照片授權與網站程式碼分開，不因收錄於本專案而變更。
+
+`gallery.js` 負責景點照片、放大視窗與授權資訊；`app.js` 透過 `dayPhotoKeys` 對應每日代表景點。移動日照片為目的地預覽，實際景觀依季節與天氣而異。

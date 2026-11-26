@@ -21,12 +21,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node --check app.js
+      - run: node --check app.js && node --check gallery.js && node --check assets/photos/catalog.js
       - uses: actions/configure-pages@v5
       - name: Prepare static website
         run: |
           mkdir -p _site
-          cp index.html style.css app.js _site/
+          cp index.html style.css app.js gallery.js _site/
           cp -R assets _site/
       - uses: actions/upload-pages-artifact@v3
         with:
